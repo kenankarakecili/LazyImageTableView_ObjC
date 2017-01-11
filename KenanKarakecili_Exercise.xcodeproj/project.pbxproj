@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		3643C8DA1E262B9D00E9BCA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3643C8D91E262B9D00E9BCA5 /* main.m */; };
 		3643C8DD1E262B9D00E9BCA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3643C8DC1E262B9D00E9BCA5 /* AppDelegate.m */; };
-		3643C8E01E262B9D00E9BCA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3643C8DF1E262B9D00E9BCA5 /* ViewController.m */; };
-		3643C8E31E262B9D00E9BCA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3643C8E11E262B9D00E9BCA5 /* Main.storyboard */; };
 		3643C8E51E262B9D00E9BCA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3643C8E41E262B9D00E9BCA5 /* Assets.xcassets */; };
 		3643C8E81E262B9D00E9BCA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3643C8E61E262B9D00E9BCA5 /* LaunchScreen.storyboard */; };
 		3643C8F31E262B9E00E9BCA5 /* KenanKarakecili_ExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3643C8F21E262B9E00E9BCA5 /* KenanKarakecili_ExerciseTests.m */; };
+		3643C9011E26333600E9BCA5 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3643C9001E26333600E9BCA5 /* MainVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +30,14 @@
 		3643C8D91E262B9D00E9BCA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3643C8DB1E262B9D00E9BCA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3643C8DC1E262B9D00E9BCA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3643C8DE1E262B9D00E9BCA5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3643C8DF1E262B9D00E9BCA5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3643C8E21E262B9D00E9BCA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3643C8E41E262B9D00E9BCA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3643C8E71E262B9D00E9BCA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3643C8E91E262B9D00E9BCA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3643C8EE1E262B9D00E9BCA5 /* KenanKarakecili_ExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KenanKarakecili_ExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3643C8F21E262B9E00E9BCA5 /* KenanKarakecili_ExerciseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KenanKarakecili_ExerciseTests.m; sourceTree = "<group>"; };
 		3643C8F41E262B9E00E9BCA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3643C8FF1E26333600E9BCA5 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		3643C9001E26333600E9BCA5 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +81,8 @@
 			children = (
 				3643C8DB1E262B9D00E9BCA5 /* AppDelegate.h */,
 				3643C8DC1E262B9D00E9BCA5 /* AppDelegate.m */,
-				3643C8DE1E262B9D00E9BCA5 /* ViewController.h */,
-				3643C8DF1E262B9D00E9BCA5 /* ViewController.m */,
-				3643C8E11E262B9D00E9BCA5 /* Main.storyboard */,
+				3643C8FD1E26327800E9BCA5 /* Views */,
+				3643C8FE1E26328400E9BCA5 /* ViewControllers */,
 				3643C8E41E262B9D00E9BCA5 /* Assets.xcassets */,
 				3643C8E61E262B9D00E9BCA5 /* LaunchScreen.storyboard */,
 				3643C8E91E262B9D00E9BCA5 /* Info.plist */,
@@ -109,6 +106,22 @@
 				3643C8F41E262B9E00E9BCA5 /* Info.plist */,
 			);
 			path = KenanKarakecili_ExerciseTests;
+			sourceTree = "<group>";
+		};
+		3643C8FD1E26327800E9BCA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3643C8FE1E26328400E9BCA5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3643C8FF1E26333600E9BCA5 /* MainVC.h */,
+				3643C9001E26333600E9BCA5 /* MainVC.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +208,6 @@
 			files = (
 				3643C8E81E262B9D00E9BCA5 /* LaunchScreen.storyboard in Resources */,
 				3643C8E51E262B9D00E9BCA5 /* Assets.xcassets in Resources */,
-				3643C8E31E262B9D00E9BCA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3643C8E01E262B9D00E9BCA5 /* ViewController.m in Sources */,
+				3643C9011E26333600E9BCA5 /* MainVC.m in Sources */,
 				3643C8DD1E262B9D00E9BCA5 /* AppDelegate.m in Sources */,
 				3643C8DA1E262B9D00E9BCA5 /* main.m in Sources */,
 			);
@@ -238,14 +250,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3643C8E11E262B9D00E9BCA5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3643C8E21E262B9D00E9BCA5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3643C8E61E262B9D00E9BCA5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -350,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KenanKarakecili_Exercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kenankarakecili.KenanKarakecili-Exercise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KenanKarakecili_Exercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kenankarakecili.KenanKarakecili-Exercise";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainVC.h
 //  KenanKarakecili_Exercise
 //
 //  Created by Kenan Karakecili on 11/1/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
-
