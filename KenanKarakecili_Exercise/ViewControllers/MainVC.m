@@ -61,7 +61,6 @@
   cell.cellTitleLabel.text = [NSString stringWithFormat:@"%@", self.rowItem.myTitle];
   cell.cellDescriptionLabel.text = [NSString stringWithFormat:@"%@", self.rowItem.myDescription];
   [cell.cellImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", self.rowItem.myImageHref]]];
-  NSLog(@"%@", self.rowItem.myImageHref);
   return cell;
 }
 
