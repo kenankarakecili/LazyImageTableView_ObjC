@@ -28,6 +28,7 @@
 
 - (void)createUI {
   self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+  self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
@@ -42,8 +43,10 @@
   [MYAPI fetchListWithCompletion:^(NSArray *rows, NSString *title) {
     self.rows = rows;
     self.navigationItem.title = title;
-    [self.tableView reloadData];
-    [self.tableView layoutIfNeeded];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.tableView reloadData];
+      [self.tableView layoutIfNeeded];
+    });
   }];
 }
 

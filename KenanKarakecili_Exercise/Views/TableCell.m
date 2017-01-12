@@ -15,7 +15,7 @@
   if (self) {
     // CellTitleLabel
     _cellTitleLabel = [[UILabel alloc] init];
-    _cellTitleLabel.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    _cellTitleLabel.backgroundColor = [UIColor colorWithRed:206.0/255.0 green:247.0/255.0 blue:135.0/255.0 alpha:1.0];
     _cellTitleLabel.textAlignment = NSTextAlignmentCenter;
     [_cellTitleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:_cellTitleLabel];
@@ -29,7 +29,7 @@
     _cellDescriptionLabel.numberOfLines = 0;
     [_cellDescriptionLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:_cellDescriptionLabel];
-    self.contentView.backgroundColor = [UIColor yellowColor];
+    self.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
   }
   return self;
 }

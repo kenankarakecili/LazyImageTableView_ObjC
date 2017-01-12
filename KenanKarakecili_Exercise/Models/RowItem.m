@@ -26,12 +26,19 @@
   NSArray *rows = returnObject[@"rows"];
   NSMutableArray *tempArray = [[NSMutableArray alloc] init];
   for (NSDictionary *row in rows) {
-    RowItem *rowItem = [[RowItem alloc] initWithTitle:row[@"title"]
-                                          description:row[@"description"]
-                                            imageHref:row[@"imageHref"]];
+    RowItem *rowItem = [[RowItem alloc] initWithTitle:[self unwrapStr:row[@"title"]]
+                                          description:[self unwrapStr:row[@"description"]]
+                                            imageHref:[self unwrapStr:row[@"imageHref"]]];
     [tempArray addObject:rowItem];
   }
   return [tempArray copy];
+}
+
++ (NSString *)unwrapStr:(NSString *)str {
+  if (str && ![str isKindOfClass:[NSNull class]]) {
+    return str;
+  }
+  return @"";
 }
 
 @end
