@@ -9,6 +9,8 @@
 #import "MainVC.h"
 #import "MYAPI.h"
 #import "RowItem.h"
+#import "TableCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainVC ()
 @property (strong, nonatomic) UITableView *tableView;
@@ -26,15 +28,22 @@
 
 - (void)createUI {
   self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
+  self.tableView.estimatedRowHeight = 200;
+  self.tableView.rowHeight = UITableViewAutomaticDimension;
   [self.view addSubview:self.tableView];
+  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(fetchList)];
+  self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 - (void)fetchList {
   [MYAPI fetchListWithCompletion:^(NSArray *rows, NSString *title) {
     self.rows = rows;
+    self.navigationItem.title = title;
     [self.tableView reloadData];
+    [self.tableView layoutIfNeeded];
   }];
 }
 
@@ -44,12 +53,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
+  TableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
   if (!cell) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellID"];
+    cell = [[TableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellID"];
   }
   self.rowItem = self.rows[indexPath.row];
-  cell.textLabel.text = [NSString stringWithFormat:@"%@", self.rowItem.myTitle];
+  cell.cellTitleLabel.text = [NSString stringWithFormat:@"%@", self.rowItem.myTitle];
+  cell.cellDescriptionLabel.text = [NSString stringWithFormat:@"%@", self.rowItem.myDescription];
+  [cell.cellImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", self.rowItem.myImageHref]]];
+  NSLog(@"%@", self.rowItem.myImageHref);
   return cell;
 }
 

@@ -15,12 +15,14 @@
   NSURLSession *session = [NSURLSession sharedSession];
   NSURLSessionDataTask *task = [session dataTaskWithRequest:request
                                            completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                             if (error || !data) {
-                                               responseData(nil);
-                                             } else {
-                                               NSLog(@"Response: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-                                               responseData(data);
-                                             }
+                                             dispatch_async(dispatch_get_main_queue(), ^{
+                                               if (error || !data) {
+                                                 responseData(nil);
+                                               } else {
+                                                 NSLog(@"Response: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                                 responseData(data);
+                                               }
+                                             });
                                            }];
   [task resume];
 }
