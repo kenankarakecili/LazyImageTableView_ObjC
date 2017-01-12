@@ -13,7 +13,7 @@
 - (instancetype)initWithMethodType:(NSString *)methodType {
   self = [super init];
   if (self) {
-    [self addValue:@"text/plain; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [self addValue:@"text/plain; iso-8859-1" forHTTPHeaderField:@"Content-Type"];
     self.HTTPMethod = methodType;
   }
   return self;

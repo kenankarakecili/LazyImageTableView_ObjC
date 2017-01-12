@@ -19,7 +19,7 @@
                                                if (error || !data) {
                                                  responseData(nil);
                                                } else {
-                                                 NSLog(@"Response: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                                 NSLog(@"Response: %@", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);
                                                  responseData(data);
                                                }
                                              });
