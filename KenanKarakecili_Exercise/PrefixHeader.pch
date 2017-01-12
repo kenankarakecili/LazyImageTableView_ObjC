@@ -16,5 +16,6 @@
 @import UIKit;
 
 #import "Constants.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #endif /* PrefixHeader_pch */

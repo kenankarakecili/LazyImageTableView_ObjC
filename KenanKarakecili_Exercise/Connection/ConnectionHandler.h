@@ -6,7 +6,6 @@
 //  Copyright © 2017 Kenan Karakecili. All rights reserved.
 //
 
-//typedef void(^ReturnObject)(id completion);
 typedef void(^ResponseData)(NSData *responseData);
 
 @interface ConnectionHandler : NSObject

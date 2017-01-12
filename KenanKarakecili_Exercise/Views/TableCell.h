@@ -6,8 +6,6 @@
 //  Copyright © 2017 Kenan Karakecili. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface TableCell : UITableViewCell
 
 @property (strong, nonatomic) UILabel * _Nullable cellTitleLabel;

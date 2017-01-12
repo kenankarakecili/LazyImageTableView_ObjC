@@ -10,7 +10,6 @@
 #import "MYAPI.h"
 #import "RowItem.h"
 #import "TableCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainVC ()
 @property (strong, nonatomic) UITableView *tableView;
@@ -43,10 +42,7 @@
   [MYAPI fetchListWithCompletion:^(NSArray *rows, NSString *title) {
     self.rows = rows;
     self.navigationItem.title = title;
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [self.tableView reloadData];
-      [self.tableView layoutIfNeeded];
-    });
+    [self.tableView reloadData];
   }];
 }
 
@@ -64,6 +60,8 @@
   cell.cellTitleLabel.text = [NSString stringWithFormat:@"%@", self.rowItem.myTitle];
   cell.cellDescriptionLabel.text = [NSString stringWithFormat:@"%@", self.rowItem.myDescription];
   [cell.cellImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", self.rowItem.myImageHref]]];
+  [cell setNeedsLayout];
+  [cell layoutIfNeeded];
   return cell;
 }
 
